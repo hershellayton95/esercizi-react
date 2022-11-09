@@ -1,11 +1,11 @@
 import React from "react";
-import { Counter } from "./Counter";
+import { CounterDisplay } from "./CounterDisplay";
 export class App extends React.Component {
     render() {
 
         return (
             <div>
-                <Counter initialValue={0} incrementInterval={1} incrementAmount={1000}/>
+                <CounterDisplay />
             </div>
         )
     }
