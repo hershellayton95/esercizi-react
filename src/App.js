@@ -8,7 +8,7 @@ export class App extends React.Component {
         return (
             <div>
                 <Hello />
-                <Welcome name="Filippo" age={27}/>
+                <Welcome name={<strong>Filippo</strong>} age={27}/>
             </div>
         )
     }
