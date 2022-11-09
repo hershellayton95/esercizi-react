@@ -1,4 +1,0 @@
-Can you use the `Hello` component more than once in the `App` component? What happens if you do ?
-
-Yes, I can.
-More than one `Hello` will be renderder.
