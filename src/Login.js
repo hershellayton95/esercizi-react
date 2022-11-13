@@ -29,6 +29,14 @@ export class Login extends React.Component {
         })
     }
 
+    hadlerReset = () => {
+        this.setState({
+                username: "",
+                password: "",
+                remember: false
+        })
+    }
+
     render() {
         return (
             <div>
@@ -37,6 +45,7 @@ export class Login extends React.Component {
                 <input type="checkbox" name="remember" checked={this.state.remember}  onChange={this.handlerInput} />
                 <div>
                     <button type="button" onClick={this.onLogin} disabled={!this.state.username || !this.state.password}>Login</button>
+                    <button type="button" onClick={this.hadlerReset}>Reset</button>
                 </div>
             </div>
         )
