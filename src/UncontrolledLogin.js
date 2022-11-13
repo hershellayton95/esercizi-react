@@ -1,14 +1,7 @@
 import React from "react";
 
 export class UncontrolledLogin extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            username: false,
-            password: false
-        }
-    }
-
+    
     headlerSubmin = (event) => {
         event.preventDefault();
 
