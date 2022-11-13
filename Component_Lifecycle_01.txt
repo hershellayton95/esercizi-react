@@ -1,5 +1,0 @@
-Component Lifecycle - 01
-
-Modify the Counter component so that the interval is initialized within the componentDidMount life cycle method instead of the constructor. Is the constructor still required?
-
-componentDidMount() is executed after the render() method. We need to initialize the state before the rendering, so I suppose the answer is: "the costructor is still required" in spite of we can declare the stati directly in the class. 

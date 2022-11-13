@@ -1,11 +1,11 @@
 import React from "react";
-import { CounterDisplay } from "./CounterDisplay";
+import { ClickCounter } from "./ClickCounter";
 export class App extends React.Component {
     render() {
 
         return (
             <div>
-                <CounterDisplay />
+                <ClickCounter />
             </div>
         )
     }
