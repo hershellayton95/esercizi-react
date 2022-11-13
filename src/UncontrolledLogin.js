@@ -1,7 +1,7 @@
 import React from "react";
 
 export class UncontrolledLogin extends React.Component {
-    
+
     headlerSubmin = (event) => {
         event.preventDefault();
 
@@ -19,7 +19,7 @@ export class UncontrolledLogin extends React.Component {
     render() {
         return (
             <form onSubmit={this.headlerSubmin}>
-                <input type="text" name="username"/>
+                <input type="text" name="username" autoFocus/>
                 <input type="password" name="password"/>
                 <input type="checkbox" name="remember"/>
                 <div>
