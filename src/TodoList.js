@@ -24,6 +24,13 @@ export class TodoList extends React.Component {
         })
     }
 
+    resetList = () => {
+        this.setState({
+            item: "",
+            items: []
+        })
+    }
+
     render() {
 
         const lisItems = this.state.items.map((elem, index) => <li key={elem + index}>{elem}</li>)
@@ -31,6 +38,7 @@ export class TodoList extends React.Component {
             <div>
                 <input type="text" name="item" value={this.state.item} onChange={this.hadlerInput} />
                 <button onClick={this.hadlerButton}>Add</button>
+                <button onClick={this.resetList}>Reset</button>
                 <ul>{lisItems}</ul>
             </div>
         )
