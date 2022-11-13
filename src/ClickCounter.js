@@ -1,18 +1,26 @@
 import React from "react";
 
-export class ClickCounter extends React.Component{
+export class ClickTracker extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            counter: 0
+            counter: "The ____________ has been pressed"
         }
     }
-    
+
+    handlerClick = (event) => {
+        this.setState({
+            counter: "The " + event.target.innerText + " has been pressed"
+        })
+    }
+
     render() {
         return (
             <div>
-                <p>Counter: {this.state.counter}</p>
-                <button onClick={() => this.setState({ counter: this.state.counter + 1})}>Increment</button>
+                <h1>{this.state.counter}</h1>
+                <button onClick={this.handlerClick}>Fist Button</button>
+                <button onClick={this.handlerClick}>Second Button</button>
+                <button onClick={this.handlerClick}>Third Button</button>
             </div>
         )
     }
