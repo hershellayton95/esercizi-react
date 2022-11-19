@@ -18,8 +18,9 @@ export class TodoList extends React.Component {
     }
 
     hadlerButton = () => {
-        this.state.items.push(this.state.item);
+        const array = this.state.items.concat(this.state.item);
         this.setState({
+            items: array,
             item: ""
         })
     }
@@ -31,9 +32,26 @@ export class TodoList extends React.Component {
         })
     }
 
+    removeItem = (event) => {
+        //non mi piace sta soluzione, se due elementi sono uguali li elimino entrambi
+        // const parentText = event.target.parentNode.innerText;
+        // const firstElement = parentText.split(" ")[0];
+        // this.setState({
+        //     items: this.state.items.filter(items => items !== firstElement)
+        // })
+
+        //sfrutterò gli indici univoci
+        const indexLi = event.target.attributes.indexli.value;
+        const arrayTemp = [...this.state.items];
+        arrayTemp.splice(indexLi,1);
+        this.setState({
+                items: arrayTemp
+        })
+    }
+
     render() {
 
-        const lisItems = this.state.items.map((elem, index) => <li key={elem + index}>{elem}</li>)
+        const lisItems = this.state.items.map((elem, index) => <li key={elem + index}>{elem} <button onClick={this.removeItem} indexli={index}>Remove</button></li>)
         return (
             <div>
                 <input type="text" name="item" value={this.state.item} onChange={this.hadlerInput} />
