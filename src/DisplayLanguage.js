@@ -10,7 +10,7 @@ export class DisplayLanguage extends React.Component {
             <div>
                 <LanguageContext.Consumer>
                     {element => {
-                        return <div>{element}</div>
+                        return <h1>{element}</h1>
                     }}
                 </LanguageContext.Consumer>
             </div>
