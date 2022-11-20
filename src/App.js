@@ -1,23 +1,29 @@
 import React from "react";
-import { TodoList } from "./TodoList";
+import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 export class App extends React.Component {
-    render() {
+        
+    state = { language: "Italiano" }
 
+    hadlerSelect = (event) => {
+        const lang = event.target.value;
+        this.setState({
+            language: lang
+        });
+    }
+
+    render() {
         return (
-            <div>
-                <TodoList render={(item, hadlerInput, hadlerAdd, resetList, lisItems) => {
-                    return (
-                        <div onKeyDown={event => {if(event.key === "Enter"){
-                            hadlerAdd()
-                        }}}>
-                            <input type="text" name="item" value={item} onChange={hadlerInput} />
-                            <button onClick={hadlerAdd}>Add</button>
-                            <button onClick={resetList}>Reset</button>
-                            <ul>{lisItems}</ul>
-                        </div>
-                    )
-                }} />
+            <div style={{display:"flex"}}>
+                <select value={this.state.language} onChange={this.hadlerSelect}>
+                    <option value="Italiano">Italiano</option>
+                    <option value="English">English</option>
+                    <option value="Français">Français</option>
+                </select>
+                <LanguageContext.Provider value={this.state.language}>
+                    <DisplayLanguage/>
+                </LanguageContext.Provider>
             </div>
         )
     }
