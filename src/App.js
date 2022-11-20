@@ -6,7 +6,7 @@ export class App extends React.Component {
 
         return (
             <div>
-                <Container>
+                <Container title={"Component Composition - 02"}>
                     <div></div>
                 </Container>
             </div>
