@@ -1,5 +1,5 @@
-export function Sum({number}){
-    const sum = number.reduce((prev, next)=>prev + next,0);
+export function Sum({numbers}){
+    const sum = numbers.reduce((prev, next)=> prev + next,0);
     return (
         <h1>{sum}</h1>
     )
