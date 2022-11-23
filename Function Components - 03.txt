@@ -3,4 +3,4 @@ Function Components - 03
 What happens if the numbers prop of the Sum component is not set? How can you set a default value for this prop?
 
 The tag h1 is appended without content.
-adding an object as parameter with an object property.
+I can adding an embedded parameter with a default array.
