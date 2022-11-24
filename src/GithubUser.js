@@ -19,8 +19,8 @@ export function GithubUser({username}) {
 
     return (
         <div>
-            {date && <p>{date.login}</p>}
-            {date && <p>{date.name}</p>}
+            {date && <p>username:{date.login}</p>}
+            {date && <p>name: {date.name}</p>}
         </div>
     )
 }
