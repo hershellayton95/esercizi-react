@@ -1,8 +1,8 @@
-import { ClickCounter } from "./ClickCounter";
+import { ControlledForm } from "./ControlledForm";
 export function App() {
     return (
         <div>
-            <ClickCounter />
+            <ControlledForm />
         </div>
     )
 }
