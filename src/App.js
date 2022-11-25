@@ -1,12 +1,8 @@
-import React from "react";
 import { ClickCounter } from "./ClickCounter";
-export class App extends React.Component {
-    render() {
-
-        return (
-            <div>
-                <ClickCounter />
-            </div>
-        )
-    }
+export function App() {
+    return (
+        <div>
+            <ClickCounter />
+        </div>
+    )
 }
