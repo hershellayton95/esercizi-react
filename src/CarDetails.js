@@ -1,8 +1,14 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export function CarDetails({initialData = { model: "Panda 4x4", year: 1994, color:"green"}}) {
 
     const _formRef = useRef();
+
+    useEffect(()=>{
+        _formRef.current.model.value = initialData.model;
+        _formRef.current.year.value = initialData.year;
+        _formRef.current.color.value = initialData.value;
+    }, [initialData])
 
     const submitFormHandler = (event) => {
         event.preventDefault();
@@ -19,7 +25,6 @@ export function CarDetails({initialData = { model: "Panda 4x4", year: 1994, colo
                 <input type="text" name="color" defaultValue={initialData.color}/>
             </div>
             <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
         </form>
     );
 }
