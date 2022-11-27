@@ -15,7 +15,7 @@ export class App extends React.Component {
 
     render() {
         return (
-            <div style={{display:"flex"}}>
+            <div>
                 <select value={this.state.language} onChange={this.hadlerSelect}>
                     <option value="Italiano">Italiano</option>
                     <option value="English">English</option>
