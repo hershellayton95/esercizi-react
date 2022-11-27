@@ -4,7 +4,7 @@ import { CarDetails } from "./CarDetails";
 export function App() {
     return (
         <div>
-            <CarDetails />
+            <CarDetails initialData = {{ model: "500", year: 2014, color: "green"}}/>
         </div>
     )
 }
