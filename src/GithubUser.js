@@ -12,20 +12,21 @@ const useGitHubUser = (username) => {
         return resp.json()
     });
 
-        const { data } = useSWR(url, fetcher);
+        const { data, mutate } = useSWR(url, fetcher);
 
 
-    return {data}
+    return {data, mutate}
 }
 
 export function GithubUser({username}) {
     
-    const {data} = useGitHubUser(username);
+    const {data, mutate} = useGitHubUser(username);
 
     return (
         <div>
             {data && <p>{data.login}</p>}
             {data && <p>{data.name}</p>}
+            <button onClick={mutate}>Refetch</button>
         </div>
     )
 }
