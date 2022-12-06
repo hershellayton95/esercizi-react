@@ -4,7 +4,7 @@ import { TodosReducer } from "./TodosReducer";
 
 const rootReducer = combineReducers({
     counter: CounterReducer,
-    user: TodosReducer
+    todos: TodosReducer
 })
 
 export const store = configureStore({
