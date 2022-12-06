@@ -28,19 +28,19 @@ export const CounterReducer = (state = defaultState, action) => {
     
     switch (action.type) {
         case INCREMENT: {
-            return state + action.payload
+            return state += action.payload
         }
 
         case DECREMENT: {
-            return state - action.payload
+            return state -= action.payload
         }
 
         case RESET: {
-            return 0
+            return defaultState
         }
     
         default:{
-            return defaultState
+            return state
         }
     }
 }
