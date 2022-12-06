@@ -3,7 +3,7 @@ import { CounterReducer } from "./CounterReducer";
 import { TodosReducer } from "./TodosReducer";
 
 const rootReducer = combineReducers({
-    counter: CounterReducer,
+    counter: CounterReducer.reducer,
     todos: TodosReducer
 })
 
