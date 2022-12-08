@@ -51,13 +51,13 @@ export class TodoList extends React.Component {
 
     render() {
 
-        const lisItems = this.state.items.map((elem, index) => <li key={elem + index}>{elem} <button onClick={this.removeItem} indexli={index}>Remove</button></li>)
+        const lisItems = this.state.items.map((elem, index) => <li data-testid="list-item" key={elem + index}>{elem} <button onClick={this.removeItem} indexli={index}>Remove</button></li>)
         return (
             <div>
-                <input type="text" name="item" value={this.state.item} onChange={this.hadlerInput} />
+                <input data-testid="todo-input" type="text" name="item" value={this.state.item} onChange={this.hadlerInput} />
                 <button onClick={this.hadlerButton}>Add</button>
                 <button onClick={this.resetList}>Reset</button>
-                <ul>{lisItems}</ul>
+                <ul data-testid="list-todo">{lisItems}</ul>
             </div>
         )
     }
