@@ -19,9 +19,9 @@ export class UncontrolledLogin extends React.Component {
     render() {
         return (
             <form onSubmit={this.headlerSubmin}>
-                <input type="text" name="username"/>
-                <input type="password" name="password"/>
-                <input type="checkbox" name="remember"/>
+                <input data-testid="username" type="text" name="username"/>
+                <input data-testid="password" type="password" name="password"/>
+                <input data-testid="remember" type="checkbox" name="remember"/>
                 <div>
                     <button type="submit">Login</button>
                     <button type="reset">Reset</button>
