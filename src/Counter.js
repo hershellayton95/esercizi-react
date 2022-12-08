@@ -20,7 +20,7 @@ export class Counter extends React.Component {
 
         return (
             <div>
-                <h1>count: {this.state.counter}</h1>
+                <h1 data-testid="heading">count: {this.state.counter}</h1>
             </div>
         )
     }
